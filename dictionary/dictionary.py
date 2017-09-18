@@ -60,6 +60,16 @@ class Dictionary:
 
         self.phrases = self.get_all_phrases()
 
+        self.confs_by_source = self.configurations_by_source()
+
+
+    def configurations_by_source(self):
+        confs_by_source = {}
+        for conf in self.configurations:
+            confs_by_source[conf.source] = conf
+
+        return confs_by_source
+
     def get_representatives(self, state):
         """
         Return representatives with the same state and keyed by rep_name
