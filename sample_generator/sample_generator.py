@@ -114,7 +114,7 @@ class SampleGenerator:
         confs_by_source = self.dictionary.confs_by_source
         configuration = confs_by_source[offer.source]
 
-        text = offer.get_text(configuration)
+        text = offer.get_text(configuration.features)
         phrases = Phrase.FromTexts([text], configuration)
         useful_offer = False
         offer_counter = {}
