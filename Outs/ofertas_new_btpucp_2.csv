@@ -1,0 +1,462 @@
+^NombreAviso^|^FuncionesResponsabilidades^|^Requerimientos^|^estudios^|^cargos^|^carreras^|^Empresa^|^salario^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^otros/no-menciona^|^contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^economía, ingeniería informática, contabilidad, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, ingeniería informática, contabilidad, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería informática, contabilidad, ingeniería mecánica, gestión, ingeniería de telecomunicaciones, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, ingeniería informática, contabilidad, ingeniería de telecomunicaciones, gestión, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^economía, derecho, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^economía, derecho, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^docente^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería informática, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería de telecomunicaciones, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^profesional especializado^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^docente^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^dirección^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^profesional especializado^|^economía, derecho^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^profesional especializado^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería de telecomunicaciones, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^profesional especializado^|^economía, derecho^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería electrónica, economía, ingeniería informática, contabilidad, ingeniería de telecomunicaciones, gestión, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería mecatrónica, ingeniería electrónica, economía, contabilidad, gestión, derecho, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, gestión, ingeniería de telecomunicaciones, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^economía, contabilidad, gestión, derecho, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^economía, ingeniería de telecomunicaciones, derecho, gestión, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^ejecutivo^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería mecatrónica, economía, contabilidad, ingeniería mecánica, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^profesional especializado^|^ingeniería de telecomunicaciones, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^economía, contabilidad, gestión, derecho, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^consultor^|^economía, contabilidad, gestión, derecho, geografía y medio ambiente, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^dirección^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^consultor^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^economía, ingeniería informática, contabilidad, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^profesional especializado^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería de telecomunicaciones, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, economía, derecho, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^operativo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, contabilidad, ingeniería mecánica, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, ingeniería informática, contabilidad, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^contabilidad, economía, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, economía, derecho, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^otros/no-menciona^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión, ingeniería de telecomunicaciones^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería informática, contabilidad, ingeniería mecánica, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^dirección^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^ejecutivo^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^economía, derecho, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^ejecutivo^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, ingeniería de telecomunicaciones, gestión, geografía y medio ambiente, ingeniería industrial^|^^|^^
+^^|^^|^^|^4 titulado^|^consultor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^consultor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, economía, derecho^|^^|^^
+^^|^^|^^|^3 bachiller^|^supervisor^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^supervisor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^profesional especializado^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^2 universidad completa^|^supervisor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, economía, derecho^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería mecatrónica, ingeniería electrónica, economía, ingeniería civil, ingeniería informática, contabilidad, ingeniería mecánica, gestión, derecho, geografía y medio ambiente, ingeniería de telecomunicaciones, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^3 bachiller^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, economía, derecho, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^operativo^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^economía, contabilidad, gestión, derecho, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^gerencia media^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^economía, derecho, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, ingeniería informática, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^asistente^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^ejecutivo^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^asistente^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, derecho, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^profesional especializado^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^asistente^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^asistente^|^economía, ingeniería informática, contabilidad, gestión, ingeniería de telecomunicaciones, derecho, ingeniería industrial, comunicación para el desarrollo^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^1 universidad incompleta^|^otros/no-menciona^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^4 titulado^|^analista^|^economía, ingeniería informática, contabilidad, derecho, gestión, ingeniería industrial^|^^|^^
+^^|^^|^^|^3 bachiller^|^analista^|^contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^3 bachiller^|^consultor^|^ingeniería industrial, contabilidad, economía, gestión^|^^|^^
+^^|^^|^^|^2 universidad completa^|^analista^|^economía, derecho, gestión^|^^|^^

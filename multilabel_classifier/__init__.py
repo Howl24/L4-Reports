@@ -1,1 +1,2 @@
-from multilabel_classifier import ClassificationManager
+from multilabel_classifier.multilabel_classifier import MultilabelClassifier
+from multilabel_classifier.classification_manager import ClassificationManager

@@ -3,6 +3,7 @@ from cassandra.cluster import NoHostAvailable
 from cassandra import InvalidRequest
 from cassandra.query import BoundStatement
 from dictionary.constants import *
+import csv
 
 class Offer:
     session = None
@@ -188,9 +189,9 @@ class Offer:
         # Include filters in configuration
 
         # Career and date range filter 
-        filter_career = "ECONOMÍA"
-        filter_min_date = (3, 2016)
-        filter_max_date = (6, 2016)
+        filter_career = "INGENIERÍA INFORMÁTICA"
+        filter_min_date = (1, 2013)
+        filter_max_date = (12, 2017)
 
         # All offers - No filter purpose
         #offers = Offer.SelectAll(configuration.source)
@@ -212,3 +213,85 @@ class Offer:
 
         offers = filtered_offers
         return offers
+
+    @classmethod
+    def PrintAsCsv(cls, offers,
+                        configuration,
+                        filename,
+                        print_id=False,
+                        print_labels=False,
+                        field=None,
+                        labels=None):
+
+        with open(filename, "w") as csvfile:
+            fieldnames = []
+
+            if print_id is True:
+                fieldnames.append("Id")
+
+            fieldnames += list(configuration.features)
+
+            if print_labels:
+                fieldnames += list(labels)
+
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for offer in offers:
+                write_dict = {}
+                if print_id is True:
+                    write_dict["Id"] = offer.id
+
+                for feature_name in configuration.features:
+                    if feature_name in offer.features:
+                        write_dict[feature_name] = offer.features[feature_name]
+
+                if print_labels:
+                    offer_labels = offer.features[field].split(",")
+                    for label in labels:
+                        if label in offer_labels:
+                            write_dict[label] = "X"
+                        else:
+                            write_dict[label] = ""
+
+                writer.writerow(write_dict)
+
+        #f = open(filename, 'w')
+
+        #field_delimiter = "|"
+        #text_delimiter = "^"
+
+        ## Group offers
+        #offers_by_source = {}
+        #for offer in offers:
+        #    if offer.source not in offers_by_source:
+        #        offers_by_source[offer.source] = []
+        #    offers_by_source[offer.source].append(offer)
+
+        #for conf in configurations:
+        #    features = conf.features
+
+        #    header = field_delimiter.join(text_delimiter + field + text_delimiter for field in conf.features)
+
+        #    if print_id:
+        #        header = "^ID^|" + header
+
+        #    print(header, file=f)
+
+        #    if conf.source not in offers_by_source:
+        #        continue
+
+        #    for offer in offers_by_source[conf.source]:
+        #        offer_fields = []
+
+        #        # Print id?
+        #        if print_id:
+        #            offer_fields.append(str(offer.id))
+
+        #        for field in conf.features:
+        #            if field in offer.features:
+        #                offer_fields.append(offer.features[field])
+
+        #        #offer_fields.append(offer.features['Majors/Concentrations'])
+        #        offer_line = field_delimiter.join(text_delimiter + field + text_delimiter for field in offer_fields)
+        #        print(offer_line, file=f)

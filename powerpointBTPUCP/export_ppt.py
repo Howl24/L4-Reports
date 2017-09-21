@@ -17,7 +17,7 @@ dictionryTitle = {"laboral":"Demanda Laboral","cargo":"Según Cargo","nivelEstud
 def appendDF(filename_list,key):
     df = None
     for filename in filename_list:
-        name = filename.split("_")
+        name = filename.split("-")
         name = name[1][:]
         keyInFile = name.split(".")[0]
         if keyInFile == key :
@@ -33,7 +33,8 @@ def create_post_titleSlide(prs,filename_list):
         newSlide = create_slide(prs,SLD_LAYOUT_ONLY_TITLE,title)
         if title == list_titles[2]:
             df = appendDF(filename_list,"cargo")
-            draw_char(newSlide, "" , df=df)
+            if df is not None :
+                draw_char(newSlide, "" , df=df)
             #Example
 
 def createBasicTitleSlide(prs,carrer):
@@ -55,8 +56,8 @@ def createBasicPresenSlide(prs,title):
     return newSlide
 
 def draw_char(slide,filename_list,df=None):
-    x = y = Inches(2)
-    cx = Inches(6)
+    x = y = Inches(1.5)
+    cx = Inches(8)
     cy = Inches(6)
     char_data = ChartData()
     if df is None:
@@ -65,7 +66,7 @@ def draw_char(slide,filename_list,df=None):
     else :
         data = df
         info = calculate_percentage(nameFile = "",df=df)
-    info[-1] += (1-info[-1])
+    #info[-1] += (1-info[-1])
     name = data.columns[0]
     char_data.categories = [ x.upper() for x in list(data[name].unique())]
     char_data.add_series('Series 1', info)
@@ -77,7 +78,7 @@ def draw_char(slide,filename_list,df=None):
     chart.plots[0].has_data_labels = True
     data_labels = chart.plots[0].data_labels
     data_labels.number_format = '0%'
-    data_labels.position = XL_LABEL_POSITION.LEFT
+    data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
 
 
 
@@ -122,9 +123,12 @@ def calculate_percentage(nameFile,df=None):
     else :
         data = df
     sumValues = values = data.sum().values[-1]
+    print(sumValues)
     listDoubles = len(data)*[0]
     for x,y in enumerate(listDoubles):
+        print(data.iloc[x,1])
         listDoubles[x] = float(data.iloc[x,1])/sumValues
+        print(listDoubles[x])
     return listDoubles
 
 dictionary_functions = {"pie":draw_char,"bar":draw_bar,"per_table":add_tablePer,"list_table":add_tableList,"list_number_str":add_tableListNumber}
@@ -133,12 +137,12 @@ def export_ppt(report_type_list,filename_list,carrer="ECONOMÍA"):
     prs = Presentation()
     createBasicTitleSlide(prs,carrer)
     #NeewFunction to create previusSlides
-    create_post_titleSlide(prs,filename_list)
+    create_post_titleSlide(prs,filename_list[:])
     webPages = filename_list[0].split('-')[:]
     createBasicTitleSlideForService(prs,webPages[0])
     pastName= webPages[0]
-    for type_ ,filename in list(zip(report_type_list,filename_list)):
-        webPages = filename.split('_')[:]
+    for type_ ,filename in list(zip(report_type_list,filename_list[:])):
+        webPages = filename.split('-')[:]
         if webPages[0] != pastName :
             createBasicTitleSlideForService(prs,webPages[0])
         else:

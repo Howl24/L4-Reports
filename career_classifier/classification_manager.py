@@ -8,10 +8,12 @@ MODE_MSG = "Escoja una acción: "
 
 UPDATE_CAREERS = "Actualizar Carreras Symplicity"
 CLASSIFY_OFFERS = "Clasificar Ofertas"
+SAVE_CLASSIFICATION_REVIEW = "Guardar Revisión"
 CLOSE = "Salir"
 
 MODES = [UPDATE_CAREERS,
          CLASSIFY_OFFERS,
+         SAVE_CLASSIFICATION_REVIEW,
          CLOSE,
         ]
 
@@ -27,6 +29,8 @@ class ClassificationManager:
         self.classifier = classifier
 
     def run(self):
+        # TODO
+        # Add save_classification
         Career.ConnectToDatabase()
         Career.PrepareStatements()
 
@@ -38,6 +42,12 @@ class ClassificationManager:
 
             if mode == CLASSIFY_OFFERS:
                 self.classify_offers()
+
+            if mode == SAVE_CLASSIFICATION_REVIEW:
+                self.save_classification_review()
+
+    def save_classification_review(self):
+        pass
 
     def update_careers(self):
         careers = set()
@@ -59,19 +69,20 @@ class ClassificationManager:
 
         READ_NEW_OFFERS_MSG = "Escogerá las ofertas a clasificar: "
         #TRAINING_SOURCES = ["symplicity"]
-        TRAINING_SOURCES = ["new_btpucp"]
+        TRAINING_SOURCES = ["symplicity"]
 
         TRAINING_DATE_RANGE = [(1, 2016), (12, 2017)]
         MIN_TRAINING_CNT = 50
 
         #self.career = self.read_career()
-        self.career= Career("ECONOMÍA")
+        self.career= Career("INGENIERÍA INFORMÁTICA").name
 
         sample_generator = SampleGenerator(self.interface)
 
         sample_generator.run(sources=TRAINING_SOURCES,
                              date_range=TRAINING_DATE_RANGE,
-                             min_cnt=MIN_TRAINING_CNT)
+                             min_cnt=MIN_TRAINING_CNT,
+                             career=self.career)
 
         sample = sample_generator.sample
         self.dictionary = sample_generator.dictionary
@@ -83,12 +94,12 @@ class ClassificationManager:
 
 
         self.interface.show_msg_list(READ_NEW_OFFERS_MSG)
-        offers = sample_generator.read_offers()
+        predict_offers = sample_generator.read_offers()
 
         self.classifier = CareerClassifier(self.career,
                                            self.dictionary,
                                            labeled_offers,
-                                           offers)
+                                           predict_offers)
 
         self.classifier.run()
 
@@ -102,7 +113,7 @@ class ClassificationManager:
     def build_labeled_offers(self, sample):
         labeled_offers = []
         for offer in sample:
-            if self.career.name in offer.careers:
+            if self.career in offer.careers:
                 label = 1
             else:
                 label = 0

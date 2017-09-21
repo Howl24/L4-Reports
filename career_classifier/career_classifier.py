@@ -16,7 +16,7 @@ class CareerClassifier:
         self.new_offers = new_offers
 
     def run(self):
-        TRAINING_SOURCES = ["new_btpucp"]
+        TRAINING_SOURCES = ["symplicity"]
 
         configurations = self.dictionary.configurations_by_source()
         configuration = configurations[TRAINING_SOURCES[0]]
@@ -30,7 +30,7 @@ class CareerClassifier:
         labeled_texts = []
         labels = []
         for offer,label in self.labeled_offers:
-            text = offer.get_text(configuration)
+            text = offer.get_text(configuration.features)
             labeled_texts.append(text)
             labels.append(label)
 
@@ -43,7 +43,7 @@ class CareerClassifier:
         predict_texts = []
         print(len(self.new_offers))
         for offer in self.new_offers:
-            text = offer.get_text(configurations[offer.source])
+            text = offer.get_text(configurations[offer.source].features)
             predict_texts.append(text)
 
         pred_tf_idf = vectorizer.transform(predict_texts).toarray()

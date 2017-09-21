@@ -1,6 +1,7 @@
 from dictionary import Dictionary
 from dictionary import Configuration
 from dictionary import Phrase
+from dictionary import Representative
 from offer import Offer
 import os
 
@@ -60,6 +61,8 @@ class DictionaryManager:
         self.dict.export_unreview_representatives()
 
     def read_import_filename(self, msg):
+        # TODO
+        # Move to static utils file
         extension = ".csv"
         filenames = [filename for filename in os.listdir() if extension in filename]
         filename = self.interface.choose_option(filenames, msg)
@@ -80,8 +83,8 @@ class DictionaryManager:
 
             data = line.split(',')
             try:
-                rep_name =data[0].strip()
-                phrase_name = data[1].strip()
+                rep_name =data[0].strip().strip("'")
+                phrase_name = data[1].strip().strip("'")
             except Exception as e:
                 wrong_lines.append(str(e) + " en linea " + str(idx + 1))
                 continue
@@ -95,8 +98,11 @@ class DictionaryManager:
                 continue
 
             phrase.representative = rep_name
+            print(rep_name)
             phrase.insert(self.dict.name)
 
+        self.dict.representatives = Representative.ByDictName(self.dict.name)
+        
         for line in wrong_lines:
             print(line)
 

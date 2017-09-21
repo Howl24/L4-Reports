@@ -1,5 +1,3 @@
-#from dictionary import SYMPLICITY_SOURCE
-#from dictionary import DICTIONARY_KEYSPACE
 from dictionary.constants import *
 import text_processor as tp
 

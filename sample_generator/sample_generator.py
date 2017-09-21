@@ -34,7 +34,7 @@ class SampleGenerator:
         self.offers = offers
         self.counter = counter
 
-    def run(self, export=False, min_cnt=None, sources=None, date_range=None):
+    def run(self, export=False, min_cnt=None, sources=None, date_range=None, career=None):
         Dictionary.PrepareStatements()
         dictionary_names = Dictionary.GetDictionaryNames()
         dict_name = self.interface.choose_option(dictionary_names,
@@ -48,29 +48,29 @@ class SampleGenerator:
         else:
             self.min_cnt = min_cnt
 
-        self.offers = self.read_offers(sources, date_range)
+        self.offers = self.read_offers(sources, date_range, career)
         self.sample = self.create_sample()
 
-        if export:
-            filename = self.dictionary.name + "_sample.csv"
-            Offer.PrintAsCsv(sample, self.dictionary.configurations, filename)
+       # if export:
+       #     filename = self.dictionary.name + "_sample.csv"
+       #     Offer.PrintAsCsv(sample, self.dictionary.configurations, filename)
 
 
-    def read_offers(self, sources=None, date_range=None):
+    def read_offers(self, sources=None, date_range=None, career=None):
         if sources is None:
             min_sources = 1
             #sources = self.interface.choose_multiple(SOURCES,
             #                                         SELECT_OFFERS_MSG,
             #                                         min_sources)
 
-            sources = ["new_btpucp"]
+            sources = ["new_aptitus"]
         else:
             sources = sources
 
         if date_range is None:
             #min_date, max_date = self.read_date_range()
             min_date = (1, 2016)
-            max_date = (3, 2016)
+            max_date = (12, 2016)
         else:
             min_date = date_range[0]
             max_date = date_range[1]
@@ -81,11 +81,23 @@ class SampleGenerator:
                                         max_date,
                                         source)
 
+        career_filtered = []
+        if career is not None:
+            for offer in offers:
+                if offer.careers is not None:
+                    if career in offer.careers:
+                        career_filtered.append(offer)
+
+            offers = career_filtered
+
+        print("Filtered Offers: ", len(offers))
+
         return offers
 
     def create_sample(self):
 
         dict_phrases = self.dictionary.accepted_phrases
+        print(dict_phrases)
 
         # Get only representatives
         representatives = self.dictionary.accepted_reps.values()
@@ -129,7 +141,7 @@ class SampleGenerator:
 
             offer_counter[rep_name] = 1
 
-        if len(offer_counter) > 10:
+        if len(offer_counter) > 5:
             # Useful offer
             for rep_name in offer_counter:
                 #print(rep_name, end=", ")

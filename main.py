@@ -26,8 +26,6 @@ def main():
     replace_out()
 
     view = Interface()
-    #cluster = Dictionary.ConnectToDatabase()
-    #Offer.ConnectToDatabase(cluster)
 
     mode = None
     while (mode != CLOSE):

@@ -193,6 +193,32 @@ class Interface:
         self.stdscr.clear()
         return response
 
+    def read_unlimited_string_list(self, msg, field, stop_string="", show_hint=False, hint=""):
+        row = 1
+        row = self.show_msg_list(msg, row)
+
+        if show_hint:
+            row = self.show_msg_list(hint, row)
+        else:
+            row +=1
+
+        read_string = None
+        values = []
+        while True:
+            self.stdscr.addstr(row, 1, field)
+            self.stdscr.clrtoeol()
+            read_string = self.stdscr.getstr().strip()
+            read_string = read_string.decode("utf-8")
+
+            if read_string == stop_string:
+                break
+
+            values.append(read_string)
+            row += 1
+
+        self.stdscr.clear()
+        return values
+
     def wait_function(self, msg, func, *args):
         self.show_msg_list(msg)
         self.stdscr.refresh()
