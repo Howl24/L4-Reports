@@ -1,13 +1,12 @@
 from dictionary import Phrase
-#from dictionary import SIMILARITY_PERCENTAGE
-from dictionary.constants import *
 
 import word2vec
 import time
 import sys
 
-
 from contextlib import contextmanager
+from dictionary.constants import SIMILARITY_PERCENTAGE
+
 
 @contextmanager
 def timeit_context(name):
@@ -71,7 +70,10 @@ class Representative:
                     continue
 
                 rep_phrase = phrases[i]
-                representative = Representative(rep_phrase.name, rep_phrase.state, [])
+                representative = Representative(rep_phrase.name,
+                                                rep_phrase.state,
+                                                [])
+
                 for j in range(i, len(phrases)):
                     if phrases[j] is None:
                         continue
@@ -98,7 +100,7 @@ class Representative:
                 representatives.append(representative)
 
         return representatives
-        
+
     def add_phrase(self, phrase):
         self.phrases.append(phrase)
         return phrase
@@ -117,7 +119,10 @@ class Representative:
         return "\n".join(lines)
 
     @classmethod
-    def ExportAsCsv(cls, representatives, filename_representatives, filename_review):
+    def ExportAsCsv(cls,
+                    representatives,
+                    filename_representatives,
+                    filename_review):
 
         # Representatives and similar phrases
         f_representatives = open(filename_representatives, 'w')
@@ -126,7 +131,8 @@ class Representative:
             for phrase in rep.phrases:
                 if rep.state is None or phrase.state is None:
                     state = ""
-                    print(", ".join(["'"+rep.name+"'", "'" + phrase.name+"'"]), file=f_representatives)
+                    print(", ".join(["'"+rep.name+"'", "'" + phrase.name+"'"]),
+                          file=f_representatives)
 
         # Only representatives to review
         f_review = open(filename_review, 'w')
@@ -134,7 +140,7 @@ class Representative:
         for rep in representatives:
             if rep.state is None:
                 state = ""
-                print(", ".join(["'" +rep.name + "'", state]), file=f_review)
+                print(", ".join(["'" + rep.name + "'", state]), file=f_review)
 
     @classmethod
     def ExportUnreview(cls, representatives, filename):
@@ -150,12 +156,9 @@ class Representative:
         for rep in representatives:
             for phrase in rep.phrases:
                 if rep.state is None or phrase.state is None:
-                    state = ""
                     print(", ".join(["'"+rep.name+"'",
                                      "'" + phrase.name+"'"]),
                           file=f)
-
-
 
     def set_state(self, state):
         self.state = state

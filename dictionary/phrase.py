@@ -1,5 +1,9 @@
-from dictionary.constants import *
+from cassandra.cluster import Cluster
+from cassandra.cluster import NoHostAvailable
 import text_processor as tp
+
+from dictionary.constants import DICTIONARY_KEYSPACE
+from dictionary.constants import SYMPLICITY_SOURCE
 
 
 class Phrase:
@@ -46,7 +50,7 @@ class Phrase:
         if other.state is not None:
             self.state = other.state
 
-        if other.representative != None:
+        if other.representative is not None:
             self.representative = other.representative
 
     @classmethod
@@ -58,7 +62,7 @@ class Phrase:
         terms = vectorizer.get_feature_names()
         idfs = vectorizer.idf_
         source = configuration.source
-            
+
         phrases = []
         for idx, term in enumerate(terms):
             idf = idfs[idx]
@@ -97,7 +101,6 @@ class Phrase:
 
         cls.session.execute(cmd_create_phrase_table)
 
-
     @classmethod
     def PrepareStatements(cls):
         cmd_select = """
@@ -114,7 +117,6 @@ class Phrase:
 
         cls.insert_stmt = cls.session.prepare(cmd_insert)
         cls.select_stmt = cls.session.prepare(cmd_select)
-
 
     def save(self, dict_name):
         """Rename to insert"""
