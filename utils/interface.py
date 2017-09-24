@@ -2,9 +2,9 @@ from offer import Offer
 
 SELECT_SOURCES_MSG = ["Seleccione las fuentes:"]
 SOURCES = ["symplicity",
-           "new_btpucp",
-           "new_aptitus",
            "new_bumeran",
+           "new_aptitus",
+           "new_btpucp",
            "new_cas",
            ]
 
@@ -15,8 +15,8 @@ WAIT_FEATURES_MSG_LIST = ["Se estan revisan los campos existentes",
 
 SELECT_FEATURES_MSG = "Seleccione los campos de la fuente: {0}"
 
-def read_sources(interface):
-    selected_sources = interface.choose_multiple(SOURCES,
+def read_sources(interface, sources=SOURCES):
+    selected_sources = interface.choose_multiple(sources,
                                                  SELECT_SOURCES_MSG)
     return selected_sources
 
@@ -27,9 +27,10 @@ def read_features(interface, sources):
                                                  sources,
                                                  )
     selected_features = {}
-    for source, features in features_by_source.items():
+    for source, features in features_by_source:
         msg = SELECT_FEATURES_MSG.format(source)
 
+        print(features)
         options = sorted(list(features))
         selected = interface.choose_multiple(options,
                                              msg)
@@ -38,12 +39,14 @@ def read_features(interface, sources):
     return selected_features
 
 def load_features(sources):
-    features = {}
+    all_features = []
     for source in sources:
-        features[source] = set()
+        source_features = set()
         offers = Offer.SelectAll(source)
         for offer in offers:
             for feature in offer.features:
-                features[source].add(feature)
+                source_features.add(feature)
 
-    return features
+        all_features.append((source, source_features))
+
+    return all_features
