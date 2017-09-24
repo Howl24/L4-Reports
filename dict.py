@@ -1,26 +1,18 @@
 from interface import Interface
 from dictionary import DictionaryManager
 
-CREATE_BOW = "Crear un nuevo bag of words"
+CREATE_DICTIONARY = "Crear un nuevo diccionario"
+UPDATE_PHRASES = "Actualizar frases"
 SAVE_REPRESENTATIVES = "Guardar palabras representativas"
 SAVE_REVIEW = "Guardar una revision de palabras representativas"
 CLOSE = "Salir"
-MODES = [CREATE_BOW,
+MODES = [CREATE_DICTIONARY,
+         UPDATE_PHRASES,
          SAVE_REPRESENTATIVES,
          SAVE_REVIEW,
          CLOSE,
          ]
 MODE_SELECTION_MSG = "Escoja una opción: "
-
-
-# def save_review(interface):
-#    Dictionary.SaveReview(view)
-#
-#    dic = interface.read_dictionary(new=False)
-#    if not dic:
-#        return
-#
-#    interface.import_review(dic)
 
 
 def replace_out():
@@ -41,8 +33,11 @@ def main():
     while (mode != CLOSE):
         mode = view.choose_option(MODES, MODE_SELECTION_MSG)
 
-        if mode == CREATE_BOW:
-            dict_manager.create_bow()
+        if mode == CREATE_DICTIONARY:
+            dict_manager.create_dictionary()
+
+        if mode == UPDATE_PHRASES:
+            dict_manager.update_phrases()
 
         if mode == SAVE_REPRESENTATIVES:
             dict_manager.save_representatives()
