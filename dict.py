@@ -2,7 +2,7 @@ from interface import Interface
 from dictionary import DictionaryManager
 
 CREATE_BOW = "Crear un nuevo bag of words"
-SAVE_REPRESENTATIVES = "Guardar un bag of words"
+SAVE_REPRESENTATIVES = "Guardar palabras representativas"
 SAVE_REVIEW = "Guardar una revision de palabras representativas"
 CLOSE = "Salir"
 MODES = [CREATE_BOW,

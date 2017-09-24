@@ -34,3 +34,9 @@ DICT_NAME_FIELD = "Nombre: "
 
 # Select an old dictionary
 DICTIONARY_SELECTION_MSG = "Seleccione el diccionario a utilizar:"
+
+# Create bow wait messages
+WAIT_MSG_UPDATE_PHRASE_FREC = "Actualizando frases ..."
+WAIT_MSG_BUILD_SIMILARS = "Agrupando frases similares ..."
+WAIT_MSG_EXPORT_SIMILARS = "Exportando similares ..."
+

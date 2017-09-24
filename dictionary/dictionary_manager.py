@@ -11,7 +11,6 @@ from dictionary.constants import *
 This class contains methods to interact with dictionaries by an interface.
 """
 
-
 class DictionaryManager:
     def __init__(self, interface, dictionary=None, cluster=None):
         self.interface = interface
@@ -21,7 +20,6 @@ class DictionaryManager:
         Offer.ConnectToDatabase(cluster)
 
     # -------------------------------------------------------------------------
-
 
     def create_bow(self):
         # Ask if user wants to create a new dictionary
@@ -40,12 +38,16 @@ class DictionaryManager:
             return None
 
         # Get dictionary phrases
-        self.dict.update_phrases_frecuency()
+        self.interface.wait_function(WAIT_MSG_UPDATE_PHRASE_FREC, 
+                                     self.dict.update_phrases_frecuency)
 
         # Group phrases by representatives
-        self.dict.build_representatives()
+        self.interface.wait_function(WAIT_MSG_BUILD_SIMILARS,
+                                     self.dict.build_representatives)
 
-        self.dict.export_unreview_phrases()
+        # Export similars
+        self.interface.wait_function(WAIT_MSG_EXPORT_SIMILARS,
+                                     self.dict.export_unreview_phrases)
 
     # -------------------------------------------------------------------------
 
