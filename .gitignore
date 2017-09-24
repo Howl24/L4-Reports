@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Out files
+*.pptx
+*.ppt
+*.csv
+
