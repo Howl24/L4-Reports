@@ -4,24 +4,17 @@ from cassandra import InvalidRequest
 from offer import Offer
 from dictionary import Representative
 from dictionary import Phrase
-
-import text_processor as tp
-#from text_processor import stop_spanish
-#from text_processor import process_text
-#from text_processor import get_term
-
 from dictionary import Configuration
-from sklearn.feature_extraction.text import CountVectorizer
-import dictionary
-import gensim
-#from dictionary import DICTIONARY_KEYSPACE
-from dictionary.constants import *
 
-import time
+from dictionary.constants import DICTIONARY_KEYSPACE
+from dictionary.constants import SUCCESSFUL_OPERATION
+from dictionary.constants import UNSUCCESSFUL_OPERATION
+
+import gensim
 import gc
 
 """
-This class contains methods to manipulate dictionary information and 
+This class contains methods to manipulate dictionary information and
 database structure.
 """
 
@@ -45,12 +38,14 @@ class Dictionary:
                  name,
                  configurations=[],
                  representatives=[],
-                 last_bow=(0, 0)):
+                 last_bow=(0, 0),
+                 sources=[]):
 
         self.name = name
         self.configurations = configurations
         self.representatives = representatives
         self.last_bow = last_bow
+        self.sources = sources
 
         self.accepted_reps = self.get_representatives(state=True)
         self.rejected_reps = self.get_representatives(state=False)
@@ -61,7 +56,6 @@ class Dictionary:
         self.phrases = self.get_all_phrases()
 
         self.confs_by_source = self.configurations_by_source()
-
 
     def configurations_by_source(self):
         confs_by_source = {}
@@ -85,10 +79,9 @@ class Dictionary:
 
         return selected_reps
 
-
     def get_phrases(self, state):
         """
-        Return phrases with the same representative state 
+        Return phrases with the same representative state
         and keyed by phrase_name
         state values:
             - True
@@ -109,14 +102,13 @@ class Dictionary:
         Similar to get_phrases with state = True, False and None
         but faster.
         """
-            
+
         phrases = {}
         for rep in self.representatives:
             for phrase in rep.phrases:
                 phrases[phrase.name] = phrase
 
         return phrases
-
 
     def __str__(self):
         txt = ""
@@ -233,7 +225,7 @@ class Dictionary:
 
     @classmethod
     def ByCassandraRows(cls, dictionary_name, configuration_rows, phrase_rows):
-        dictionary = Dictionary(dictionary_name)
+        dict = Dictionary(dictionary_name)
 
         # Add dictionary configuration
         for row in configuration_rows:
@@ -242,11 +234,11 @@ class Dictionary:
             ngrams = row.ngrams
             dfs = row.dfs
             last_bow = row.last_bow
-            dictionary.add_configuration(source,
-                                         features,
-                                         ngrams,
-                                         dfs,
-                                         last_bow)
+            dict.add_configuration(source,
+                                   features,
+                                   ngrams,
+                                   dfs,
+                                   last_bow)
 
         # Add dictionary phrases
         for row in phrase_rows:
@@ -255,10 +247,10 @@ class Dictionary:
             source = row.source
             representative = row.representative
             state = row.state
-            dictionary.add_phrase(phrase, quantity, source,
-                                  representative, state)
+            dict.add_phrase(phrase, quantity, source,
+                            representative, state)
 
-        return dictionary
+        return dict
 
     @classmethod
     def SetInterface(self, interface):
@@ -294,7 +286,6 @@ class Dictionary:
             self.rejected[rep_name].add_phrase(name, quantity,
                                                source, state)
 
-
     def save_configuration(self):
         for configuration in self.configurations:
             configuration.save()
@@ -312,9 +303,15 @@ class Dictionary:
         self.configurations.sort()
 
         for configuration in self.configurations:
+
+            # Check if configuration source was selected
+            if configuration.source not in self.sources:
+                continue
+
             offers = Offer.FromConfiguration(configuration)
 
-            texts = [offer.get_text(configuration.features) for offer in offers]
+            texts = [offer.get_text(configuration.features)
+                     for offer in offers]
             self.free(offers)
 
             read_phrases = Phrase.FromTexts(texts, configuration)
@@ -345,7 +342,6 @@ class Dictionary:
     def export_unreview_representatives(self):
         filename = self.name + "_revisión" + ".csv"
         Representative.ExportUnreview(self.representatives, filename)
-
 
     # -------------------------------------------------------------------------
 
