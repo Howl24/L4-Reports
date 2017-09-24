@@ -13,7 +13,7 @@ class Phrase:
     table_name = "dict_phrases"
     keyspace = DICTIONARY_KEYSPACE
 
-    def __init__(self, name, idf, source, state=None, representative=""):
+    def __init__(self, name, idf, source, state=None, representative=None):
         self.name = name
         self.idf = idf
         self.source = source

@@ -147,7 +147,8 @@ class Representative:
         f = open(filename, 'w')
         print("Representante, Aceptar?", file=f)
         for rep in representatives:
-            print(", ".join(["'" + rep.name + "'"]), file=f)
+            if rep.name is not None and rep.state is None:
+                print(", ".join(["'" + rep.name + "'"]), file=f)
 
     @classmethod
     def ExportUnreviewPhrases(cls, representatives, filename):
