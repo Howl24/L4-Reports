@@ -1,8 +1,8 @@
 from cassandra.cluster import Cluster
 from cassandra.cluster import NoHostAvailable
-#from dictionary import DICTIONARY_KEYSPACE
-#from dictionary import SYMPLICITY_SOURCE
-from dictionary.constants import *
+from dictionary.constants import DICTIONARY_KEYSPACE
+from dictionary.constants import SYMPLICITY_SOURCE
+
 
 class Configuration:
 
@@ -20,7 +20,8 @@ class Configuration:
         self.dfs = dfs
 
     def __lt__(self, other):
-        return self.source != SYMPLICITY_SOURCE and other.source == SYMPLICITY_SOURCE
+        return self.source != SYMPLICITY_SOURCE and \
+               other.source == SYMPLICITY_SOURCE
 
     @classmethod
     def ConnectToDatabase(cls, cluster=None):
@@ -33,7 +34,6 @@ class Configuration:
             raise
 
         return cluster
-
 
     @classmethod
     def PrepareStatements(cls):
@@ -78,7 +78,7 @@ class Configuration:
     @classmethod
     def ByDictName(cls, dictionary_name):
         configuration_rows = cls.session.execute(cls.select_stmt,
-                                                  (dictionary_name,))
+                                                 (dictionary_name,))
 
         if not configuration_rows:
             return None
@@ -88,7 +88,7 @@ class Configuration:
                 source = row.source
                 features = row.features
                 ngrams = row.ngrams
-                dfs= row.dfs
+                dfs = row.dfs
 
                 conf = cls(dictionary_name, source, features, ngrams, dfs)
                 configurations.append(conf)
