@@ -86,7 +86,13 @@ def get_terms(texts, configuration):
     return all_terms
 
 
-def build_vectorizer(configuration, vocabulary=None):
+def build_vectorizer(configuration, vocabulary=None, min_df=None):
+    if vocabulary is None:
+        if min_df is None:
+            min_df = configuration.dfs[0]
+    else:
+        min_df = 0
+
     vectorizer = TfidfVectorizer(stop_words=stop_spanish,
                                  ngram_range=configuration.ngrams,
                                  min_df=configuration.dfs[0],

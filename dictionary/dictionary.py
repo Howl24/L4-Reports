@@ -10,6 +10,7 @@ from dictionary.constants import DICTIONARY_KEYSPACE
 from dictionary.constants import SUCCESSFUL_OPERATION
 from dictionary.constants import UNSUCCESSFUL_OPERATION
 
+import text_processor as tp
 import gensim
 import gc
 
@@ -358,3 +359,19 @@ class Dictionary:
             phrases.append(phrase.phrase)
 
         return phrases
+
+
+    # ------------------------------------------------------------------------
+    def transform(self, text, configuration):
+        """ Conver a text to a phrase list that contains the dictionary 
+        accepted phrases that are found in the text"""
+
+        vocab = [phrase.name for phrase in self.accepted_phrases.values()]
+        vectorizer = tp.build_vectorizer(configuration, min_df=0)
+
+        vectorizer.fit([text])
+        terms = vectorizer.get_feature_names()
+
+        filter_phrases = [self.accepted_phrases[term]
+                          for term in terms if term in vocab]
+        return filter_phrases
