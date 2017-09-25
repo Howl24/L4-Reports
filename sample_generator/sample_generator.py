@@ -97,7 +97,7 @@ class SampleGenerator:
 
             offers = career_filtered
 
-        print("Filtered Offers: ", len(offers))
+        print("Read Offers: ", len(offers))
 
         return offers
 

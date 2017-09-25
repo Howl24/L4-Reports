@@ -1,7 +1,5 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neural_network import MLPClassifier
 import text_processor as tp
 from dictionary import Phrase
 from offer import Offer
@@ -9,57 +7,69 @@ from sklearn import cross_validation
 
 
 class CareerClassifier:
-    def __init__(self, career, dictionary, labeled_offers, new_offers):
+    def __init__(self, career, dictionary, train_offers, predict_offers):
         self.career = career
         self.dictionary = dictionary
-        self.labeled_offers = labeled_offers
-        self.new_offers = new_offers
+        self.train_offers = train_offers
+        self.predict_offers = predict_offers
 
     def run(self):
-        TRAINING_SOURCES = ["symplicity"]
+        TRAINING_SOURCE = "symplicity"
 
         configurations = self.dictionary.configurations_by_source()
-        configuration = configurations[TRAINING_SOURCES[0]]
+        train_conf = configurations[TRAINING_SOURCE]
 
         dict_phrases = self.dictionary.accepted_phrases
         vocab = [phrase.name for phrase in dict_phrases.values()]
 
-        vectorizer = tp.build_vectorizer(configuration, vocab)
+        vectorizer = tp.build_vectorizer(train_conf, vocab)
 
         #Symplicity terms
-        labeled_texts = []
-        labels = []
-        for offer,label in self.labeled_offers:
-            text = offer.get_text(configuration.features)
-            labeled_texts.append(text)
-            labels.append(label)
+        train_texts = []
+        train_labels = []
+        for offer,label in self.train_offers:
+            text = offer.get_text(train_conf.features)
+            train_texts.append(text)
+            train_labels.append(label)
 
-        tf_idf = vectorizer.fit_transform(labeled_texts).toarray()
+        train_tfidf = vectorizer.fit_transform(train_texts).toarray()
 
         classifier = MultinomialNB()
-        #classifier = GaussianNB()
-        #classifier = MLPClassifier()
 
         predict_texts = []
-        print(len(self.new_offers))
-        for offer in self.new_offers:
+        for offer in self.predict_offers:
             text = offer.get_text(configurations[offer.source].features)
             predict_texts.append(text)
 
-        pred_tf_idf = vectorizer.transform(predict_texts).toarray()
-        predictions = classifier.fit(tf_idf, labels).predict(pred_tf_idf)
+        predict_tfidf = vectorizer.transform(predict_texts).toarray()
+        clf = classifier.fit(train_tfidf, train_labels)
+        predictions = clf.predict(predict_tfidf)
 
-        score = cross_validation.cross_val_score(classifier, tf_idf, labels, cv=10)
+        score = cross_validation.cross_val_score(classifier, 
+                                                 train_tfidf,
+                                                 train_labels,
+                                                 cv=10)
         print(score)
 
-        ok = []
-        no_ok = []
+        career_offers = []
+        no_career_offers = []
         for idx, pred in enumerate(predictions):
             if pred == 1:
-                ok.append(self.new_offers[idx])
+                career_offers.append(self.predict_offers[idx])
             else:
-                no_ok.append(self.new_offers[idx])
+                no_career_offers.append(self.predict_offers[idx])
 
-        Offer.PrintAsCsv([x for x,y in self.labeled_offers if y == 1], self.dictionary.configurations, "Training.csv")
-        Offer.PrintAsCsv(ok, self.dictionary.configurations, "Yes.csv")
-        Offer.PrintAsCsv(no_ok, self.dictionary.configurations, "No.csv")
+        self.exportClassifiedOffers(career_offers, self.career)
+        self.exportClassifiedOffers(no_career_offers, "No_" + self.career)
+
+    def exportClassifiedOffers(self, classified_offers, filename):
+        configurations = self.dictionary.configurations_by_source()
+        offers_by_source = {}
+        for offer in classified_offers:
+            if offer.source not in offers_by_source:
+                offers_by_source[offer.source] = []
+            offers_by_source[offer.source].append(offer)
+
+        for source, offers in offers_by_source.items():
+            Offer.PrintAsCsv(offers, configurations[source],
+                             filename + "_" + source + ".csv", print_id=True)
