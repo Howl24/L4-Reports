@@ -144,7 +144,8 @@ class Interface:
         msg = "\n".join(msg_list)
         return msg
 
-    def read_int_list(self, msg, field_list, field_range, show_hint=False, hint=""):
+    def read_int_list(self, msg, field_list, field_range,
+                      show_hint=False, hint=""):
         row = 1
         row = self.show_msg_list(msg, row)
 
@@ -193,21 +194,27 @@ class Interface:
         self.stdscr.clear()
         return response
 
-    def read_unlimited_string_list(self, msg, field, stop_string="", show_hint=False, hint=""):
+    def read_unlimited_string_list(self, msg, field, stop_string="",
+                                   show_hint=False, hint=""):
+        # TODO
+        # Fix read_string accent bug
+        # Replication: write a label with accent and delete only one letter
+        # Cause your don't delete the accent character, it will raise an error
+        # when decoded
         row = 1
         row = self.show_msg_list(msg, row)
 
         if show_hint:
             row = self.show_msg_list(hint, row)
         else:
-            row +=1
+            row += 1
 
         read_string = None
         values = []
         while True:
             self.stdscr.addstr(row, 1, field)
             self.stdscr.clrtoeol()
-            read_string = self.stdscr.getstr().strip()
+            read_string = self.stdscr.getstr()
             read_string = read_string.decode("utf-8")
 
             if read_string == stop_string:
