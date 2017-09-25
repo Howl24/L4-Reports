@@ -1,9 +1,8 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-import text_processor as tp
-from dictionary import Phrase
 from offer import Offer
 from sklearn import cross_validation
+from career_classifier.constants import TRAINING_SOURCE
+import text_processor as tp
 
 
 class CareerClassifier:
@@ -14,8 +13,6 @@ class CareerClassifier:
         self.predict_offers = predict_offers
 
     def run(self):
-        TRAINING_SOURCE = "symplicity"
-
         configurations = self.dictionary.configurations_by_source()
         train_conf = configurations[TRAINING_SOURCE]
 
@@ -24,10 +21,10 @@ class CareerClassifier:
 
         vectorizer = tp.build_vectorizer(train_conf, vocab)
 
-        #Symplicity terms
+        # Symplicity terms
         train_texts = []
         train_labels = []
-        for offer,label in self.train_offers:
+        for offer, label in self.train_offers:
             text = offer.get_text(train_conf.features)
             train_texts.append(text)
             train_labels.append(label)
@@ -45,7 +42,7 @@ class CareerClassifier:
         clf = classifier.fit(train_tfidf, train_labels)
         predictions = clf.predict(predict_tfidf)
 
-        score = cross_validation.cross_val_score(classifier, 
+        score = cross_validation.cross_val_score(classifier,
                                                  train_tfidf,
                                                  train_labels,
                                                  cv=10)
