@@ -2,7 +2,14 @@ from dictionary import DictionaryManager
 from sample_generator import SampleGenerator
 from career_classifier import CareerClassifier
 from career_classifier import Career
+from utils import read_import_filename
 from offer import Offer
+from offer.constants import OFFER_ID_FIELD
+from offer.constants import OFFER_YEAR_FIELD
+from offer.constants import OFFER_MONTH_FIELD
+from offer.constants import OFFER_SOURCE_FIELD
+import csv
+
 
 MODE_MSG = "Escoja una acción: "
 
@@ -47,7 +54,23 @@ class ClassificationManager:
                 self.save_classification_review()
 
     def save_classification_review(self):
-        pass
+        READ_CAREER_OFFERS_FILENAME_MSG = "Seleccione el archivo con las ofertas" + \
+                                          " de la carrera."
+        self.career = self.read_career().name
+
+        filename = read_import_filename(self.interface,
+                                        READ_CAREER_OFFERS_FILENAME_MSG)
+
+        with open(filename, 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                id = row['Id']
+                year = int(row["Año"])
+                month = int(row["Mes"])
+                source = row["Fuente"]
+                offer = Offer.Select(year, month, id, source)
+                offer.careers.add(self.career)
+                offer.insert()
 
     def update_careers(self):
 
