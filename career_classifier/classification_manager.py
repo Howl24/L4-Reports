@@ -1,4 +1,3 @@
-from dictionary import DictionaryManager
 from sample_generator import SampleGenerator
 from career_classifier import CareerClassifier
 from career_classifier import Career
@@ -10,22 +9,24 @@ from offer.constants import OFFER_MONTH_FIELD
 from offer.constants import OFFER_SOURCE_FIELD
 import csv
 
+from career_classifier.constants import MODE_MSG
+from career_classifier.constants import UPDATE_CAREERS
+from career_classifier.constants import CLASSIFY_OFFERS
+from career_classifier.constants import SAVE_CLASSIFICATION_REVIEW
+from career_classifier.constants import CLOSE
+from career_classifier.constants import MODES
 
-MODE_MSG = "Escoja una acción: "
+from career_classifier.constants import CHOOSE_CAREER_MSG
+from career_classifier.constants import READ_CAREER_OFFERS_FILENAME_MSG
 
-UPDATE_CAREERS = "Actualizar Carreras Symplicity"
-CLASSIFY_OFFERS = "Clasificar Ofertas"
-SAVE_CLASSIFICATION_REVIEW = "Guardar Revisión"
-CLOSE = "Salir"
+from career_classifier.constants import CHOOSE_CAREERS_MSG
+from career_classifier.constants import SYMPLICITY_SOURCE
+from career_classifier.constants import SYMPLICITY_CAREER_FEATURES
 
-MODES = [UPDATE_CAREERS,
-         CLASSIFY_OFFERS,
-         SAVE_CLASSIFICATION_REVIEW,
-         CLOSE,
-        ]
-
-SYMPLICITY_SOURCE = "symplicity"
-SYMPLICITY_CAREER_FEATURES = ["Majors/Concentrations"]
+from career_classifier.constants import TRAINING_SOURCE
+from career_classifier.constants import TRAINING_DATE_RANGE
+from career_classifier.constants import MIN_TRAINING_CNT
+from career_classifier.constants import WAIT_CLASSIFICATION_MSG
 
 
 class ClassificationManager:
@@ -54,8 +55,6 @@ class ClassificationManager:
                 self.save_classification_review()
 
     def save_classification_review(self):
-        READ_CAREER_OFFERS_FILENAME_MSG = "Seleccione el archivo con las ofertas" + \
-                                          " de la carrera."
         self.career = self.read_career().name
 
         filename = read_import_filename(self.interface,
@@ -63,19 +62,22 @@ class ClassificationManager:
 
         with open(filename, 'r') as csvfile:
             reader = csv.DictReader(csvfile)
-            for row in reader:
-                id = row['Id']
-                year = int(row["Año"])
-                month = int(row["Mes"])
-                source = row["Fuente"]
+            for idx, row in enumerate(reader):
+                try:
+                    id = row[OFFER_ID_FIELD]
+                    year = int(row[OFFER_YEAR_FIELD])
+                    month = int(row[OFFER_MONTH_FIELD])
+                    source = row[OFFER_SOURCE_FIELD]
+                except ValueError:
+                    print("Valor incorrecto en la fila ", idx)
+                except KeyError:
+                    print("Valor faltante en la fila ", idx)
+
                 offer = Offer.Select(year, month, id, source)
                 offer.careers.add(self.career)
                 offer.insert()
 
     def update_careers(self):
-
-        CHOOSE_CAREERS_MSG = "Seleccione las carreras q desea ingresar"
-
         careers = set()
         offers = Offer.SelectAll(SYMPLICITY_SOURCE)
         for offer in offers:
@@ -95,16 +97,8 @@ class ClassificationManager:
             career.insert()
 
     def classify_offers(self):
-        WAIT_CLASSIFICATION_MSG = "Clasificando ofertas ..."
-
-        TRAINING_SOURCE = "symplicity"
-
-        TRAINING_DATE_RANGE = [(1, 2015), (12, 2017)]
-        MIN_TRAINING_CNT = 15
 
         self.career = self.read_career().name
-        #self.career= Career("INGENIERÍA INFORMÁTICA").name
-
         sample_generator = SampleGenerator(self.interface)
 
         sample_generator.min_cnt = MIN_TRAINING_CNT
@@ -142,8 +136,7 @@ class ClassificationManager:
         return labeled_offers
 
     def read_career(self):
-        CHOOSE_CAREER_MSG = "Seleccione la carrera a clasificar:"
         careers = sorted(Career.Select())
-                
+
         career = self.interface.choose_option(careers, CHOOSE_CAREER_MSG)
         return career
