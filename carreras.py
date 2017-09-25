@@ -26,7 +26,7 @@ def replace_out():
 
 def generate_sample(view):
     sample_generator = SampleGenerator(view)
-    sample_generator.run()
+    sample_generator.run(export=True)
 
 
 def run_career_classifier(view):
