@@ -70,7 +70,6 @@ class Career:
         cls.session.execute(cmd_create_career_table)
 
     def insert(self):
-        print("foo" + self.name + "foo")
         self.session.execute(self.insert_stmt, (self.name, ))
 
     @classmethod
