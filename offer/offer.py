@@ -7,6 +7,12 @@ import csv
 SUCCESSFUL_OPERATION = True
 UNSUCCESSFUL_OPERATION = False
 
+OFFER_ID_FIELD = "Id"
+OFFER_YEAR_FIELD = "Año"
+OFFER_MONTH_FIELD = "Mes"
+OFFER_SOURCE_FIELD = "Fuente"
+
+
 class Offer:
     session = None
     keyspace = ""
@@ -109,6 +115,9 @@ class Offer:
 
     @classmethod
     def Select(cls, year, month, id, source):
+        if source != cls.keyspace:
+            cls.SetKeyspace(source)
+
         rows = cls.session.execute(cls.select_stmt,
                                    (year, month, id))
 
@@ -119,7 +128,11 @@ class Offer:
 
     @classmethod
     def ByCassandraRow(cls, row, source):
-        return cls(row.year, row.month, row.id, row.careers, row.features,
+        return cls(row.year,
+                   row.month,
+                   row.id,
+                   row.features,
+                   row.careers,
                    source=source)
 
     @classmethod
@@ -254,7 +267,10 @@ class Offer:
             fieldnames = []
 
             if print_id is True:
-                fieldnames.append("Id")
+                fieldnames.append(OFFER_ID_FIELD)
+                fieldnames.append(OFFER_YEAR_FIELD)
+                fieldnames.append(OFFER_MONTH_FIELD)
+                fieldnames.append(OFFER_SOURCE_FIELD)
 
             fieldnames += list(configuration.features)
 
@@ -267,7 +283,10 @@ class Offer:
             for offer in offers:
                 write_dict = {}
                 if print_id is True:
-                    write_dict["Id"] = offer.id
+                    write_dict[OFFER_ID_FIELD] = offer.id
+                    write_dict[OFFER_YEAR_FIELD] = offer.year
+                    write_dict[OFFER_MONTH_FIELD] = offer.month
+                    write_dict[OFFER_SOURCE_FIELD] = offer.source
 
                 for feature_name in configuration.features:
                     if feature_name in offer.features:
