@@ -5,6 +5,7 @@ from offer import Offer
 import os
 from utils import read_sources
 from utils import read_features
+from utils import read_import_filename
 
 from dictionary.constants import WAIT_MSG_UPDATE_PHRASE_FREC
 from dictionary.constants import WAIT_MSG_BUILD_SIMILARS
@@ -100,18 +101,9 @@ class DictionaryManager:
         self.import_representatives()
         self.dict.export_unreview_representatives()
 
-    def read_import_filename(self, msg):
-        # TODO
-        # Move to static utils file
-        extension = ".csv"
-        filenames = [filename
-                     for filename in os.listdir() if extension in filename]
-        filename = self.interface.choose_option(filenames, msg)
-
-        return filename
-
     def import_representatives(self):
-        filename = self.read_import_filename(READ_REPRESENTATIVES_FILENAME_MSG)
+        filename = read_import_filename(self.interface,
+                                        READ_REPRESENTATIVES_FILENAME_MSG)
 
         f = open(filename, 'r')
 
@@ -157,7 +149,8 @@ class DictionaryManager:
         self.import_review()
 
     def import_review(self):
-        filename = self.read_import_filename(READ_REVIEW_FILENAME_MSG)
+        filename = read_import_filename(self.interface,
+                                        READ_REVIEW_FILENAME_MSG)
 
         f = open(filename, 'r')
         representatives = {}

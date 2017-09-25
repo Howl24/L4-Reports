@@ -1,4 +1,5 @@
 from offer import Offer
+import os
 
 SELECT_SOURCES_MSG = ["Seleccione las fuentes:"]
 SOURCES = ["symplicity",
@@ -97,3 +98,14 @@ def read_date_range(interface):
             show_hint = True
 
         return min_date, max_date
+
+
+def read_import_filename(interface, msg):
+    # TODO
+    # Move to static utils file
+    extension = ".csv"
+    filenames = [filename
+                 for filename in os.listdir() if extension in filename]
+    filename = interface.choose_option(filenames, msg)
+
+    return filename
