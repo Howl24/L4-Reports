@@ -1,5 +1,8 @@
-GENERAL_KEYSPACE = "general"
 from cassandra.cluster import Cluster
+from cassandra.cluster import NoHostAvailable
+
+GENERAL_KEYSPACE = "general"
+
 
 class Label:
     session = None
@@ -25,7 +28,6 @@ class Label:
             raise
 
         return cluster
-
 
     @classmethod
     def CreateTables(cls):
@@ -60,9 +62,9 @@ class Label:
         """ From outside class instance usage
             Example: Insert(career, field, label)
         """
-        self.session.execute(cls.insert_stmt, (career,
-                                               field,
-                                               label,))
+        cls.session.execute(cls.insert_stmt, (career,
+                                              field,
+                                              label,))
 
     def insert(self):
         """ label.insert() """
@@ -72,7 +74,7 @@ class Label:
 
     @classmethod
     def Select(cls, career):
-        # TODO 
+        # TODO
         # Replace by class label return dictionary
         """ Return all career labels keyed by field"""
 
@@ -85,9 +87,9 @@ class Label:
 
             if field not in labels_by_field:
                 labels_by_field[field] = []
-                    
+
             labels_by_field[field].append(label_name)
-            #label = Label(career, field, label_name)
-            #labels.append(label)
+            # label = Label(career, field, label_name)
+            # labels.append(label)
 
         return labels_by_field

@@ -5,8 +5,8 @@ import csv
 from sample_generator import SampleGenerator
 from offer import Offer
 
-GET_OFFERS = "Obtener ofertas a clasificar"
 SET_CAREER_LABELS = "Crear etiquetas para clasificación"
+GET_OFFERS = "Obtener ofertas a clasificar"
 CLASSIFY_OFFERS = "Clasificar Areas de Conocimiento"
 SAVE_CLASSIFICATION_REVIEW = "Guardar Revisión"
 CLOSE = "Salir"
@@ -49,10 +49,9 @@ class ClassificationManager:
             if mode == SAVE_CLASSIFICATION_REVIEW:
                 self.save_classification_review()
 
-    # --------------------------------------------------------------------------------------------
+    # --------------------------------------------------------------------
 
     def set_labels(self):
-        
         career = self.read_career().name
         field = self.read_field_name()
         label_names = self.read_label_names()
