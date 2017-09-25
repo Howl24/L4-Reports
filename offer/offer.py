@@ -2,8 +2,10 @@ from cassandra.cluster import Cluster
 from cassandra.cluster import NoHostAvailable
 from cassandra import InvalidRequest
 from cassandra.query import BoundStatement
-from dictionary.constants import *
 import csv
+
+SUCCESSFUL_OPERATION = True
+UNSUCCESSFUL_OPERATION = False
 
 class Offer:
     session = None
@@ -11,6 +13,7 @@ class Offer:
     offers_table = "new_offers"
     select_stmt = None
     select_all_stmt = None
+    insert_stmt = None
 
     def __init__(self, year=0, month=0, id="",
                  features={}, careers=set(), skills={},
@@ -19,7 +22,11 @@ class Offer:
         self.month = month
         self.id = id
         self.features = features
+
+        if careers is None:
+            careers = set()
         self.careers = careers
+
         self.skills = skills
         self.source = source
 
@@ -69,16 +76,36 @@ class Offer:
                          SELECT * FROM {0}
                          """.format(cls.offers_table)
 
+        cmd_insert = """
+                     INSERT INTO {0}
+                     (id, year, month, careers, features)
+                     VALUES
+                     (?, ?, ?, ?, ?);
+                     """.format(cls.offers_table)
+
         try:
             cls.select_stmt = cls.session.prepare(cmd_select)
             prepared_stmt = cls.session.prepare(cmd_select_all)
             cls.select_all_stmt = BoundStatement(prepared_stmt, fetch_size=10)
+            cls.insert_stmt = cls.session.prepare(cmd_insert)
         except InvalidRequest:
             print("Tabla no configurada")
             raise
             return UNSUCCESSFUL_OPERATION
 
         return SUCCESSFUL_OPERATION
+
+    def insert(self):
+        if Offer.keyspace != self.source:
+            Offer.SetKeyspace(self.source)
+
+        self.session.execute(self.insert_stmt, 
+                             (self.id,
+                              self.year,
+                              self.month,
+                              self.careers,
+                              self.features,
+                              ))
 
     @classmethod
     def Select(cls, year, month, id, source):
