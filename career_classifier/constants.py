@@ -1,8 +1,5 @@
-
 # --------------------------------------------------------------------------
 # Manager modes
-
-MODE_MSG = "Escoja una acción: "
 
 UPDATE_CAREERS = "Actualizar Carreras Symplicity"
 CLASSIFY_OFFERS = "Clasificar Ofertas"
@@ -14,6 +11,8 @@ MODES = [UPDATE_CAREERS,
          SAVE_CLASSIFICATION_REVIEW,
          CLOSE,
          ]
+
+MODE_MSG = "Escoja una acción: "
 
 # -------------------------------------------------------------------------
 # Read career

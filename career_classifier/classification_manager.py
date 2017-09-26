@@ -37,8 +37,6 @@ class ClassificationManager:
         self.classifier = classifier
 
     def run(self):
-        # TODO
-        # Add save_classification
         Career.ConnectToDatabase()
         Career.PrepareStatements()
 
