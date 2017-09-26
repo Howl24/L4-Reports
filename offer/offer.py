@@ -293,51 +293,15 @@ class Offer:
                         write_dict[feature_name] = offer.features[feature_name]
 
                 if print_labels:
-                    offer_labels = offer.features[field].split(",")
-                    for label in labels:
-                        if label in offer_labels:
-                            write_dict[label] = "X"
-                        else:
+                    if field in offer.features:
+                        offer_labels = offer.features[field].split(",")
+                        for label in labels:
+                            if label in offer_labels:
+                                write_dict[label] = "X"
+                            else:
+                                write_dict[label] = ""
+                    else:
+                        for label in labels:
                             write_dict[label] = ""
 
                 writer.writerow(write_dict)
-
-        #f = open(filename, 'w')
-
-        #field_delimiter = "|"
-        #text_delimiter = "^"
-
-        ## Group offers
-        #offers_by_source = {}
-        #for offer in offers:
-        #    if offer.source not in offers_by_source:
-        #        offers_by_source[offer.source] = []
-        #    offers_by_source[offer.source].append(offer)
-
-        #for conf in configurations:
-        #    features = conf.features
-
-        #    header = field_delimiter.join(text_delimiter + field + text_delimiter for field in conf.features)
-
-        #    if print_id:
-        #        header = "^ID^|" + header
-
-        #    print(header, file=f)
-
-        #    if conf.source not in offers_by_source:
-        #        continue
-
-        #    for offer in offers_by_source[conf.source]:
-        #        offer_fields = []
-
-        #        # Print id?
-        #        if print_id:
-        #            offer_fields.append(str(offer.id))
-
-        #        for field in conf.features:
-        #            if field in offer.features:
-        #                offer_fields.append(offer.features[field])
-
-        #        #offer_fields.append(offer.features['Majors/Concentrations'])
-        #        offer_line = field_delimiter.join(text_delimiter + field + text_delimiter for field in offer_fields)
-        #        print(offer_line, file=f)
