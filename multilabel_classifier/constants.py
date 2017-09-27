@@ -25,15 +25,15 @@ FIELD = "Campo: "
 # Read labels
 READ_LABEL_MSG = "Ingrese el nombre de las etiquetas"
 LABEL_FIELD = "Etiqueta: "
-STOP_STRING = ""
-HINT = "(Etiqueta vacía para terminar.)"
+READ_LABELS_STOP_STRING = ""
+READ_LABELS_HINT = "(Etiqueta vacía para terminar.)"
 
 # Select labels
 CHOOSE_FIELD_MSG = "Seleccione un campo: "
 
 # ------------------------------------------------------------------------
 # Get offers to label
-TRAINING_MIN_WORD_COUNT = 20
+TRAINING_MIN_OFFER_CNT = 10
 
 # -------------------------------------------------------------------------
 # Classify offers
