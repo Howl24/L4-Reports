@@ -123,12 +123,9 @@ def calculate_percentage(nameFile,df=None):
     else :
         data = df
     sumValues = values = data.sum().values[-1]
-    print(sumValues)
     listDoubles = len(data)*[0]
     for x,y in enumerate(listDoubles):
-        print(data.iloc[x,1])
         listDoubles[x] = float(data.iloc[x,1])/sumValues
-        print(listDoubles[x])
     return listDoubles
 
 dictionary_functions = {"pie":draw_char,"bar":draw_bar,"per_table":add_tablePer,"list_table":add_tableList,"list_number_str":add_tableListNumber}
