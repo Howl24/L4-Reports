@@ -384,16 +384,17 @@ class Processor:
         proc_offers = []
         for idx, unproc_offer in enumerate(data):
             proc_offer = self.process_offer(unproc_offer)
-            if proc_offer.careers:
-                #printing...
-                #proc_offer.print_l4(False, feature_list_symplicity)
+            #if proc_offer.careers:
+            #    #printing...
+            #    #proc_offer.print_l4(False, feature_list_symplicity)
 
-                if 'NombreAviso' in proc_offer.features:
-                    proc_offer.print_l4(False, feature_list_1)
-                else:
-                    proc_offer.print_l4(False, feature_list_2)
+            #    if 'NombreAviso' in proc_offer.features:
+            #        proc_offer.print_l4(False, feature_list_1)
+            #    else:
+            #        proc_offer.print_l4(False, feature_list_2)
 
-                proc_offers.append(proc_offer)
+            #    proc_offers.append(proc_offer)
+            proc_offers.append(proc_offer)
 
         return proc_offers
         #for proc_offer in proc_offers:

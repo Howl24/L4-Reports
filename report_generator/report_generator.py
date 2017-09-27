@@ -32,6 +32,12 @@ DEGREES_REP_TITLE = "nivelEstudio"
 DEGREES_L4_SLUG = "degrees"
 DEGREES_REP_TYPE = "bar"
 
+PROFILES_FIELD = "Áreas de Conocimiento"
+PROFILES_L4_SLUG = "software"
+PROFILES_REP_TITLE = "Foo"
+PROFILES_REP_TYPE = "foo"
+
+
 REPORTS = [ALL_REPORTS,
            POSITIONS,
            DEGREES,
@@ -115,7 +121,7 @@ class ReportGenerator:
 
             if POSITIONS in self.reports[source]:
                 filename = source + "-" + POSITIONS_REP_TITLE
-                self.print_l4(l4_count, l4_words,
+                self.print_l4_count(l4_count,
                          POSITIONS_L4_SLUG,
                          POSITIONS_REP_TYPE,
                          filename,
@@ -126,7 +132,7 @@ class ReportGenerator:
 
             if DEGREES in self.reports[source]:
                 filename = source + "-" + DEGREES_REP_TITLE
-                self.print_l4(l4_count, l4_words,
+                self.print_l4_count(l4_count,
                          DEGREES_L4_SLUG,
                          DEGREES_REP_TYPE,
                          filename,
@@ -136,10 +142,33 @@ class ReportGenerator:
                 report_filenames.append(filename)
 
             if PROFILES in self.reports[source]:
-                # add profile reports
+                # divide offer by profile
+                offers_by_label = {}
+                for offer in offers:
+                    if PROFILES_FIELD in offer.features:
+                        labels = offer.features[PROFILES_FIELD].split(",")
+                        for label in labels:
+                            if label not in offers_by_label:
+                                offers_by_label[label] = []
 
-                pass
+                            offers_by_label[label].append(offer)
+                    else:
+                        print("Algunas ofertas no tienen áreas de conocimiento")
+                        return
+                                
+                filename = source + "-" + PROFILES_REP_TITLE
+                words_by_label = {}
+                for label, offers in offers_by_label.items():
+                    print(label, len(offers), sep=",")
+                    label_cnt, label_words = self.processing_offers([offers],
+                                                                    source)
+                    words_by_label[label] = label_words
+                    print(label_words)
 
+                self.print_l4_words(words_by_label, PROFILES_L4_SLUG, filename)
+
+                #report_types.append(PROFILES_REP_TYPE)
+                #report_filenames.append(filename)
 
             if CLUSTERS in self.reports[source]:
                 # add cluster reports
@@ -150,13 +179,24 @@ class ReportGenerator:
                     offers_by_id[offer.id] = offer
 
                 # get offers from cluster
-                #cluster_ids = self.run_cluster(offers)
-                #cluster_offers = {}
-                #for cluster in cluster_ids:
-                #    cluster_name = "Cluster " + str(cluster + 1)
-                #    cluster_offers[cluster_name] = []
-                #    for id in cluster_ids[cluster]:
-                #        cluster_offers[cluster_name].append(offers_by_id[id])
+                cluster_ids = self.run_cluster(offers)
+                cluster_offers = {}
+                for cluster in cluster_ids:
+                    cluster_name = "Cluster " + str(cluster + 1)
+                    cluster_offers[cluster_name] = []
+                    for id in cluster_ids[cluster]:
+                        cluster_offers[cluster_name].append(offers_by_id[id])
+
+                for cluster, offers in cluster_offers.items():
+                    print(cluster, len(offers))
+                    clr_cnt, clr_words = self.processing_offers([offers],
+                                                                source)
+                    filename = source + "-" + CLUSTER_REP_TITLE
+                    self.print_l4(label_cnt, label_words,
+                                  CLUSTER_L4_SLUG,
+                                  CLUSTER_REP_TYPE,
+                                  filename,
+                                  )
 
             if PxC in self.reports[source]:
                 pass
@@ -216,13 +256,25 @@ class ReportGenerator:
 
         return l4_count_1, l4_words_1
 
-    def print_l4(self, l4_count, l4_word, rep_slug, rep_type, filename):
+    def print_l4_count(self, l4_count,
+                       rep_slug, rep_type, filename):
 
         f = open(filename, 'w')
         if rep_type in ["pie", "bar"]:
             print(rep_slug, "nro cov", sep=", ", file=f)
             for skill in l4_count[rep_slug]:
                 print(skill, l4_count[rep_slug][skill], file=f, sep=", ")
+
+        f.close()
+
+    def print_l4_words(self, l4_words_by_label, rep_slug, filename):
+        f = open(filename, "w")
+
+        print("Area", rep_slug, sep=", ", file=f)
+        for label, l4_words in l4_words_by_label.items():
+            skills = l4_words[rep_slug]
+            for skill in skills:
+                print(label,skill, sep=", ", file=f)
 
         f.close()
 
@@ -240,8 +292,15 @@ class ReportGenerator:
         return l4_count_1
 
     def pass_words(self, l4_words_1, l4_words_2):
+        for field in l4_words_2:
+            if field not in l4_words_1:
+                l4_words_1[field] = l4_words_2[field]
+            else:
+                for skill in l4_words_2[field]:
+                    # Set can override a repeated skill
+                    l4_words_1[field].add(skill)
+
         return l4_words_1
-        pass
 
     def process(self, offers, q_l4_cnt, q_l4_words, source, outfile):
         proc_filename = "proc_" + source
